@@ -17,6 +17,17 @@
     position: relative;
   }
   
+  #crsr{
+    height: 2.7vw;
+    width: 2.7vw;
+    border: 1px solid #a8a3a3;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
   #loader{
     height: 100%;
     width: 100%;
@@ -26,7 +37,6 @@
     background-color: #0B0B0B;
   }
   .line {
-    /* background-color: rgb(95, 96, 96); */
     height: fit-content;
     overflow: hidden;
     display: flex;
@@ -107,3 +117,57 @@
     width: 100%;
     background-color: #151515;
   }
+
+#page1 #nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.6vw 5.5vw;
+}
+#nav-part2{
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+}
+#nav-part2 h4{
+  font-weight: 100;
+  font-size: 14px;
+}
+.hero{
+  width: 72%;
+  margin-left: 27%;
+  height: fit-content;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.hero:nth-child(2){
+  margin-top: 16vh;
+}
+.hero h1{
+  font-size: 7vw;
+  text-transform: uppercase;
+  line-height: 7vw;
+  letter-spacing: 0.3vw;
+}
+.hero h2 , h3{
+  font-size: 7vw;
+  text-transform: uppercase;
+  line-height: 7vw;
+  letter-spacing: 0.3vw;
+}
+#hero3 h2{
+  border-bottom: 8px solid #ffff;
+  padding-bottom: 5px;
+  transition: all ease 0.3s;
+}
+
+#hero3 h2:hover{
+  font-weight: 300;
+  -webkit-text-stroke: 0.3px rgb(255, 255, 255);
+  color:transparent;
+  border-bottom: 8px solid #ffffff00;
+}
+#web{
+  margin-right: 10px;
+}

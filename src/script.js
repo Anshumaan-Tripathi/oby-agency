@@ -7,9 +7,8 @@ gsap.from('#line1-part1',{
 })
 gsap.from('#line1-part1 h5',{
   color:'red',
-  // delay:1,
   duration:2,
-  OnStart:function(){
+  onStart:function(){
     let text = document.querySelector("#line1-part1 h5");
     let grow = 0;
       setInterval(function () {
@@ -39,7 +38,6 @@ tl.from('.wait',{
   y:100,
   opacity:0,
   duration:0.5,
-  // delay:0.2
 })
 
 tl.to("#loader", {
@@ -48,10 +46,31 @@ tl.to("#loader", {
   delay: 1.2,
   display: "none",
 });
-
 tl.from("#page1", {
   ease: Power4,
   duration: 0.8,
   y: 1600,
 });
 
+tl.from('#hero1 h1, #hero2 h1, #hero3 , #hero4',{
+  y:250,
+  stagger:0.2
+})
+tl.from('#nav',{
+  opacity:0,
+  y:-100,
+  duration:0.2
+})
+gsap.to('#loader span h1',{
+  color:'red',
+})
+
+document.addEventListener('mousemove',function(dets){
+  gsap.to('#crsr',{
+    left:dets.x,
+    top:dets.y,
+    duration:0.2,
+  })
+})
+
+Shery.makeMagnet("#nav-part2 h4",{});
