@@ -49,7 +49,12 @@ tl.to("#loader", {
 tl.from("#page1", {
   ease: Power4,
   duration: 0.8,
-  y: 1600,
+  y: 1200,
+  overflow:'hidden',
+});
+gsap.from("#page1 , #page2, #page3 ,#page4", {
+  position:'fixed',
+  duration:3.5,
 });
 
 tl.from('#hero1 h1, #hero2 h1, #hero3 , #hero4',{
@@ -62,7 +67,7 @@ tl.from('#nav',{
   duration:0.2
 })
 gsap.to('#loader span h1',{
-  color:'red',
+  color:'#EA213A',
 })
 
 document.addEventListener('mousemove',function(dets){
@@ -72,5 +77,13 @@ document.addEventListener('mousemove',function(dets){
     duration:0.2,
   })
 })
+
+// document.addEventListener('mousemove',function(dets){
+//   gsap.to('#video-cursor',{
+//     left:dets.x,
+//     top:dets.y,
+//     duration:0.2,
+//   })
+// })
 
 Shery.makeMagnet("#nav-part2 h4",{});
