@@ -193,14 +193,14 @@
   left: 27%;
 }
 #video-cursor{
-  height: 22vh;
-  width: 11vw;
+  height: 20vh;
+  width: 10vw;
   border-radius: 50%;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  left: 70%;
+  left: 68%;
   top: -13%;
   z-index: 1;
   background-color: #FFA63D;
@@ -305,11 +305,87 @@
 .reward-description{
   width: 100%;
   font-size: 2.1vh;
+  display: flex;
+  align-items: center;
+}
+
+#moving-text-container {
+  /* background-color: #8b8b8b; */
+  margin-top: 10%;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Hide overflow */
+}
+
+#moving-text-container .moving-div {
+  /* background-color: #18312a; */
+  /* flex: 1; */
+  line-height: 19vh;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  /* border: 1px solid white; */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+#moving-div1, #moving-div3{
+  animation: scroll 18s linear infinite; /* Adjust speed as needed */
+}
+#moving-div2, #moving-div4{
+  animation: scroll2 22s  linear infinite; /* Adjust speed as needed */
+}
+.moving-div span{
+  -webkit-text-stroke: 0.8px #fff;
+  color: transparent;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(4%);
+  }
+  100% {
+    transform: translateX(-95%); /* Move left to half width */
+  }
+}
+@keyframes scroll2 {
+  0% {
+    transform: translateX(-95%);
+  }
+  100% {
+    transform: translateX(4%); /* Move left to half width */
+  }
+}
+@keyframes scroll3 {
+  0% {
+    transform: translateX(4%);
+  }
+  100% {
+    transform: translateX(-95%); /* Move left to half width */
+  }
+}
+@keyframes scroll4 {
+  0% {
+    transform: translateX(4%);
+  }
+  100% {
+    transform: translateX(-95%); /* Move left to half width */
+  }
+}
+@keyframes scroll5 {
+  0% {
+    transform: translateX(4%);
+  }
+  100% {
+    transform: translateX(-95%); /* Move left to half width */
+  }
 }
 
 
-#page5{
-  min-height: 100vh;
-  width: 100%;
-  background-color:  #151515;
+.moving-div span{
+  font-size: 7vw;
+  text-transform: uppercase;
+  margin: 0 1.2vw;
+}
+
+.moving-div #text-serif{
+  font-family: 'silk serif','serif'; 
 }
