@@ -15,14 +15,15 @@
   body{
     overflow-x: hidden;
   }
-/* Hide scrollbar for Chrome, Safari and Edge */
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; /* Optional: You can set this to match the background */
-}
-
+  /* Hide scrollbar for Chrome, Safari and Edge */
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Optional: You can set this to match the background */
+  }
+  
   #main{
-    background-color: #030303;
+    background-color: #151515;
+    /* background-color: #030303; */
     position: relative;
   }
   
@@ -180,6 +181,15 @@
   line-height: 7vw;
   letter-spacing: 0.3vw;
 }
+
+#hero1::before{
+  content: '01';
+  left:18%;
+  top:34%;
+  font-size: 3.2vw;
+  font-family: 'silk serif';
+  position: absolute;
+}
 #hero3 h2{
   border-bottom: 8px solid #ffff;
   padding-bottom: 5px;
@@ -200,6 +210,7 @@
   height: 100vh;
   width: 100%;
   background-color: #151515;
+  margin-top: 26vh;
   padding-top: 22vh;
   position: relative;
 }
@@ -243,6 +254,48 @@
   min-height: 100vh;
   position: relative;
   background-color:  #151515;
+  /* background-color:  #342121; */
+  padding: 8vh;
+  margin-top: 12vh;
+}
+.page3-heading{
+  margin-left: 27%;
+}
+#page3 h1{
+  font-size: 6.6vw;
+  text-transform: uppercase;
+  letter-spacing: 0.2vw;
+  margin: 5vw 0;
+}
+.page3-heading h1::before{
+  content: '04';
+  left:17%;
+  top:15%;
+  font-size: 3.2vw;
+  font-family: 'silk serif';
+  position: absolute;
+}
+.image-div-container{
+  background-color: rebeccapurple;
+  position: relative;
+  padding: 1vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.image-div{
+  height: 24vw;
+  height: 33vw;
+  background-color: #3F7DF4;
+  overflow: hidden;
+  position: relative;
+}
+.image-div img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 #page4{
   width: 100%;
@@ -261,7 +314,15 @@
   letter-spacing: 0.2vw;
   margin: 5vw 0;
 }
-#page4-content .underline{
+#page4-content>h1::before{
+  content: '03';
+  left:18%;
+  top:5%;
+  font-size: 3.2vw;
+  font-family: 'silk serif';
+  position: absolute;
+}
+.underline{
   height: 1px;
   width: 100%;
   background-color: #fff;
@@ -420,18 +481,26 @@
   align-items: center;
   line-height: 1; /* Consistent line height to prevent movement */
 }
-
+.footer-heading::before{
+    content: '04';
+    left:16%;
+    top:21%;
+    font-size: 3.2vw;
+    font-family: 'silk serif';
+    position: absolute;
+  
+}
 .footer-heading span {
   font-family: 'Plain Light', sans-serif; /* Use a fallback font */
   font-size: 8vw;
+  font-weight: 900;
   text-transform: uppercase;
   display: inline-block; /* Allows better control over spacing */
-  letter-spacing: 0.1em; /* Keep letter spacing consistent */
+  letter-spacing: 1px; /* Keep letter spacing consistent */
   transition: font-family 0.2s ease, color 0.2s ease, webkitTextStroke 0.2s ease; /* Smooth transitions */
   /* Set a line-height that matches both fonts if you have specific line heights */
   line-height: 1.2; /* Set a fixed line-height to avoid shifts */
 }
-
 
 .footer-heading i{
   padding-left: 3vw;
@@ -442,7 +511,7 @@
 #footer-box{
   margin-left: 22%;
   margin-top: 5%;
-  padding: 6.5vw 0;
+  padding: 6.8vw 0;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   display: flex;
@@ -466,14 +535,20 @@
   width: 100%;
 }
 .say-hello .hello{
-  width: 20%;
+  margin-right: 10vw;
+
 }
 .say-hello .hello a{
   font-size: 1.8vw;
   color: #fff;
+  text-decoration: underline;
 }
 .copyright{
   /* text-align: center; */
   padding-top: 2vw;
   margin-left: 22%;
+}
+._canvas_container{
+  z-index: 9999 !important;
+  pointer-events: none;
 }
